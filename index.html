@@ -57,10 +57,88 @@
           </ul>
         </address>
       </div>
+      <div class="burger-div">
+        <a class="burger-btn" href="">
+          <svg class="header-icon" width="24" height="24">
+            <use href="./images/icons.svg#icon-heroicons"></use>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Header Modal is-open-->
+      <div class="backdrop-header">
+        <div class="modal-header">
+          <button type="button" class="close-btn-header">
+            <svg class="close-icon" width="8" height="8">
+              <use href="./images/icons.svg#icon-close-black"></use>
+            </svg>
+          </button>
+          <nav class="header-nav-modal">
+            <ul class="nav-ul-modal">
+              <li class="nav-li-modal current">
+                <a class="nav-li-link-modal" href="./index.html">Studio</a>
+              </li>
+              <li class="nav-li-modal">
+                <a class="nav-li-link-modal" href="">Portfolio</a>
+              </li>
+              <li class="nav-li-modal">
+                <a class="nav-li-link-modal" href="">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+
+          <address class="address-modal">
+            <ul class="address-ul-modal">
+              <li class="address-ul-li-modal">
+                <a class="email-tel-modal" href="tel:+110001111111">
+                  +11 (000) 111-11-11
+                </a>
+              </li>
+              <li class="address-ul-li-modal">
+                <a class="email-tel-modal" href="mailto:info@devstudio.com">
+                  info@devstudio.com
+                </a>
+              </li>
+            </ul>
+          </address>
+
+          <ul class="social-blok-modal">
+            <li class="social-blok-link-modal">
+              <a href="https://www.instagram.com/" target="_blank" class="link">
+                <svg class="social-icon-modal" width="24" height="24">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-blok-link-modal">
+              <a href="https://www.twitter.com/" target="_blank" class="link">
+                <svg class="social-icon-modal" width="24" height="24">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-blok-link-modal">
+              <a href="https://www.facebook.com/" target="_blank" class="link">
+                <svg class="social-icon-modal" width="24" height="24">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-blok-link-modal">
+              <a href="https://ua.linkedin.com/" target="_blank" class="link">
+                <svg class="social-icon-modal" width="24" height="24">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
 
     <main>
       <!-- Section one Hero  -->
+
       <section class="hero section">
         <div class="container">
           <h1 class="title">Effective Solutions for Your Business</h1>
@@ -69,6 +147,7 @@
       </section>
 
       <!-- Section two Advantages -->
+
       <section class="advantages section">
         <div class="container advantages-container">
           <h2 class="visually-hidden">Advantages</h2>
@@ -135,7 +214,8 @@
               <div class="img-box">
                 <img
                   class="img-cont"
-                  src="./images/img-3.jpg"
+                  src="./images/product.jpg"
+                  srcset="./images/product@1x.jpg, ./images/product@2x.jpg 2x"
                   width="264"
                   alt="Multi-idea Product Designer"
                 />
@@ -197,7 +277,11 @@
               <div class="img-blok">
                 <img
                   class="img-cont"
-                  src="./images/img-2.jpg"
+                  src="./images/frontend.jpg"
+                  srcset="
+                    ./images/developer@1x.jpg 1x,
+                    ./images/developer@2x.jpg 2x
+                  "
                   width="264"
                   alt="Charismatic Frontend Developer"
                 />
@@ -258,7 +342,11 @@
               <div class="img-box">
                 <img
                   class="img-cont"
-                  src="./images/img-1.jpg"
+                  src="./images/marketing.jpg"
+                  srcset="
+                    ./images/marketing@1x.jpg 1x,
+                    ./images/marketing@2x.jpg 2x
+                  "
                   width="264"
                   alt="Beautiful Marketing"
                 />
@@ -319,7 +407,11 @@
               <div class="img-box">
                 <img
                   class="img-cont"
-                  src="./images/img.jpg"
+                  src="./images/designer.jpg"
+                  srcset="
+                    ./images/designer@1x.jpg 1x,
+                    ./images/designer@2x.jpg 2x
+                  "
                   width="264"
                   alt="Unbridled UI Designer"
                 />
@@ -391,6 +483,10 @@
                 <img
                   class="img-cont"
                   src="./images/banking-app.jpg"
+                  srcset="
+                    ./images/banking-app@1x.jpg 1x,
+                    ./images/banking-app@2x.jpg 2x
+                  "
                   width="360"
                   alt="Banking App"
                 />
@@ -405,11 +501,16 @@
                 <p class="paragraph">App</p>
               </div>
             </li>
+
             <li class="portfolio-ul-li">
               <div class="img-box overlay">
                 <img
                   class="img-cont"
                   src="./images/cashless-payment.jpg"
+                  srcset="
+                    ./images/cashless-payment@1x.jpg 1x,
+                    ./images/cashless-payment@2x.jpg
+                  "
                   width="360"
                   alt="Cashless Payment"
                 />
@@ -425,11 +526,16 @@
                 <p class="paragraph">Marketing</p>
               </div>
             </li>
+
             <li class="portfolio-ul-li">
               <div class="img-box overlay">
                 <img
                   class="img-cont"
                   src="./images/meditation-app.jpg"
+                  srcset="
+                    ./images/meditation-app@1x.jpg 1x,
+                    ./images/meditation-app@2x.jpg 2x
+                  "
                   width="360"
                   alt="Meditation App"
                 />
@@ -445,11 +551,16 @@
                 <p class="paragraph">App</p>
               </div>
             </li>
+
             <li class="portfolio-ul-li">
               <div class="img-box overlay">
                 <img
                   class="img-cont"
                   src="./images/taxi-service.jpg"
+                  srcset="
+                    ./images/taxi-service@1x.jpg 1x,
+                    ./images/taxi-service@2x.jpg 2x
+                  "
                   width="360"
                   alt="Taxi Service"
                 />
@@ -470,6 +581,10 @@
                 <img
                   class="img-cont"
                   src="./images/screen-illustrations.jpg"
+                  srcset="
+                    ./images/screen-illustrations@1x.jpg 1x,
+                    ./images/screen-illustrations@2x.jpg 2x
+                  "
                   width="360"
                   alt="Screen Illustrations"
                 />
@@ -489,6 +604,10 @@
                 <img
                   class="img-cont"
                   src="./images/online-courses.jpg"
+                  srcset="
+                    ./images/online-courses@1x.jpg 1x,
+                    ./images/online-courses@2x.jpg 2x
+                  "
                   width="360"
                   alt="Online Courses"
                 />
@@ -514,7 +633,7 @@
     <footer class="footer">
       <div class="footer-div container">
         <div class="footer-box">
-          <a class="logo footer-logo" href="./index.html">
+          <a class="footer-logo" href="./index.html">
             Web<span class="accent-logo">Studio</span>
           </a>
           <p class="footer-text">
@@ -598,8 +717,8 @@
       </div>
     </footer>
 
-    <!-- FORM  is-open -->
-    <div class="backdrop is-open">
+    <!-- FORM in footer is-open -->
+    <div class="backdrop">
       <div class="modal">
         <button type="button" class="close-btn">
           <svg class="close-icon" width="8" height="8">
