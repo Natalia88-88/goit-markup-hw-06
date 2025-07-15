@@ -57,13 +57,11 @@
           </ul>
         </address>
       </div>
-      <div class="burger-div">
-        <a class="burger-btn" href="">
-          <svg class="header-icon" width="24" height="24">
-            <use href="./images/icons.svg#icon-heroicons"></use>
-          </svg>
-        </a>
-      </div>
+      <button class="burger-btn" type="button">
+        <svg class="header-icon" width="24" height="24">
+          <use href="./images/icons.svg#icon-heroicons"></use>
+        </svg>
+      </button>
 
       <!-- Header Modal is-open-->
       <div class="backdrop-header">
@@ -73,34 +71,38 @@
               <use href="./images/icons.svg#icon-close-black"></use>
             </svg>
           </button>
-          <nav class="header-nav-modal">
-            <ul class="nav-ul-modal">
-              <li class="nav-li-modal current">
-                <a class="nav-li-link-modal" href="./index.html">Studio</a>
-              </li>
-              <li class="nav-li-modal">
-                <a class="nav-li-link-modal" href="">Portfolio</a>
-              </li>
-              <li class="nav-li-modal">
-                <a class="nav-li-link-modal" href="">Contacts</a>
-              </li>
-            </ul>
-          </nav>
+          <div class="header-nav-div">
+            <nav class="header-nav-modal">
+              <ul class="nav-ul-modal">
+                <li class="nav-li-modal current">
+                  <a class="nav-li-link-modal current" href="./index.html"
+                    >Studio</a
+                  >
+                </li>
+                <li class="nav-li-modal">
+                  <a class="nav-li-link-modal" href="">Portfolio</a>
+                </li>
+                <li class="nav-li-modal">
+                  <a class="nav-li-link-modal" href="">Contacts</a>
+                </li>
+              </ul>
+            </nav>
 
-          <address class="address-modal">
-            <ul class="address-ul-modal">
-              <li class="address-ul-li-modal">
-                <a class="email-tel-modal" href="tel:+110001111111">
-                  +11 (000) 111-11-11
-                </a>
-              </li>
-              <li class="address-ul-li-modal">
-                <a class="email-tel-modal" href="mailto:info@devstudio.com">
-                  info@devstudio.com
-                </a>
-              </li>
-            </ul>
-          </address>
+            <address class="address-modal">
+              <ul class="address-ul-modal">
+                <li class="address-ul-li-modal">
+                  <a class="email-tel-modal current" href="tel:+110001111111">
+                    +11 (000) 111-11-11
+                  </a>
+                </li>
+                <li class="address-ul-li-modal">
+                  <a class="email-tel-modal" href="mailto:info@devstudio.com">
+                    info@devstudio.com
+                  </a>
+                </li>
+              </ul>
+            </address>
+          </div>
 
           <ul class="social-blok-modal">
             <li class="social-blok-link-modal">
@@ -222,7 +224,7 @@
               </div>
               <div class="team-block">
                 <h3 class="item-title">Mark Guerrero</h3>
-                <p class="paragraph">Product Designer</p>
+                <p class="paragraph-team">Product Designer</p>
 
                 <ul class="social-blok">
                   <li class="social-blok-link">
@@ -288,7 +290,7 @@
               </div>
               <div class="team-block">
                 <h3 class="item-title">Tom Ford</h3>
-                <p class="paragraph">Frontend Developer</p>
+                <p class="paragraph-team">Frontend Developer</p>
 
                 <ul class="social-blok">
                   <li class="social-blok-link">
@@ -353,7 +355,7 @@
               </div>
               <div class="team-block">
                 <h3 class="item-title">Camila Garcia</h3>
-                <p class="paragraph">Marketing</p>
+                <p class="paragraph-team">Marketing</p>
 
                 <ul class="social-blok">
                   <li class="social-blok-link">
@@ -418,7 +420,7 @@
               </div>
               <div class="team-block">
                 <h3 class="item-title">Daniel Wilson</h3>
-                <p class="paragraph">UI Designer</p>
+                <p class="paragraph-team">UI Designer</p>
 
                 <ul class="social-blok">
                   <li class="social-blok-link">
@@ -718,7 +720,7 @@
     </footer>
 
     <!-- FORM in footer is-open -->
-    <div class="backdrop">
+    <div class="backdrop is-open">
       <div class="modal">
         <button type="button" class="close-btn">
           <svg class="close-icon" width="8" height="8">
@@ -784,8 +786,7 @@
               id="user-comment"
               rows="10"
               placeholder="Text input"
-            >
-            </textarea>
+            ></textarea>
           </div>
 
           <div class="form-modal-privacy">

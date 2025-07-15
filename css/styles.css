@@ -65,10 +65,22 @@ button {
   top: 0;
   z-index: 99;
 }
-.header-icon {
+
+.burger-btn {
+  display: flex;
+  cursor: pointer;
   position: absolute;
   top: 16px;
   right: 16px;
+  border: none;
+  background-color: #fff;
+}
+
+.header-icon {
+  max-width: 100%;
+  max-height: 100%;
+  justify-content: center;
+  align-items: center;
   fill: #2f2f37;
 }
 
@@ -108,10 +120,6 @@ button {
   display: none;
 }
 
-.burger-btn {
-  cursor: pointer;
-}
-
 /* ----Header Modal ----*/
 
 .backdrop-header {
@@ -130,11 +138,15 @@ button {
 
 .modal-header {
   position: absolute;
+  display: flex;
+  flex-direction: column;
   top: 0;
   left: 0;
   width: 320px;
   height: 100%;
+  padding-top: 72px;
   padding-left: 16px;
+  padding-right: 24px;
   background-color: #fcfcfc;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -143,22 +155,21 @@ button {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-nav-modal {
+.header-nav-div {
   display: flex;
-  align-items: center;
-  margin-top: 72px;
-  margin-bottom: 168px;
+  flex-direction: column;
+  gap: 168px;
+  margin-bottom: 48px;
 }
 
 .nav-ul-modal {
   display: flex;
   flex-direction: column;
-  max-width: 151px;
+  max-width: 100%;
   row-gap: 40px;
+  margin-bottom: auto;
 }
 
 .nav-li-link-modal {
@@ -174,10 +185,6 @@ button {
 
 .nav-li-modal.current {
   color: #404bbf;
-}
-
-.backdrop-header:not(is-open) .modal-header {
-  transform: translate(-50%, -50%) scale(1.5);
 }
 
 .close-btn-header {
@@ -218,7 +225,6 @@ button {
   display: flex;
   flex-direction: column;
   row-gap: 24px;
-  margin-bottom: 48px;
 }
 
 .email-tel-modal {
@@ -230,6 +236,10 @@ button {
   text-decoration: none;
   margin-right: 0;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.email-tel-modal.current {
+  color: #4d5ae5;
 }
 
 /* ----Header modal social ---- */
@@ -248,9 +258,9 @@ button {
 .social-blok-modal {
   display: flex;
   justify-content: space-between;
-  column-gap: 40px;
+  /* column-gap: 40px;
   margin-bottom: 40px;
-  margin-left: 0;
+  margin-left: 0; */
   margin-right: 24px;
 }
 
@@ -298,7 +308,7 @@ button {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/people-office.jpg);
+    url(../images/Dark-bg-mob.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -431,7 +441,7 @@ button {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  row-gap: 104px;
+  row-gap: 72px;
 }
 
 .team-ul-li {
@@ -454,8 +464,17 @@ button {
   padding: 32px 0;
 }
 
-.team-block .paragraph {
+.team-block .paragraph-team {
   text-align: center;
+}
+
+.paragraph-team {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #434455;
+  margin-bottom: 8px;
 }
 /* Section Our Team end */
 
@@ -666,7 +685,7 @@ footer-form-box {
 }
 
 .footer-form-input {
-  min-width: 288px;
+  width: 288px;
   height: 40px;
   padding-top: 8px;
   padding-bottom: 8px;
@@ -719,7 +738,8 @@ footer-form-box {
   fill: #f4f4fd;
   top: 50%;
   right: 16px;
-  margin-left: 16px;
+  justify-content: center;
+  align-items: center;
 }
 
 /*  Footer end */
@@ -749,7 +769,7 @@ footer-form-box {
   position: absolute;
   top: 50%;
   left: 50%;
-  max-width: 288px;
+  width: 288px;
   border-radius: 4px;
   padding: 72px 16px 24px 16px;
   background-color: #fcfcfc;
@@ -767,9 +787,9 @@ footer-form-box {
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.backdrop:not(is-open) .modal {
+/* .backdrop:not(is-open) .modal {
   transform: translate(-50%, -50%) scale(1.5);
-}
+} */
 
 .modal-btn {
   position: relative;
@@ -1042,12 +1062,31 @@ input:active {
 
 /*----- @MEDIA ------*/
 
-@media (min-resolution: 96) {
+@media (min-width: 320px) {
+  .hero {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office-page.jpg);
+  }
+}
+
+@media (min-width: 320px) and (min-resolution: 192px) {
+  .hero {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/Dark-bg-mob@2x.jpg);
+  }
 }
 
 /* ---- min-width: 768px ---- */
 
-@media screen and (min-width: 768px) and (min-resolution: 192dpi) {
+@media screen and (min-width: 768px) {
   .container {
     min-width: 768px;
   }
@@ -1073,11 +1112,9 @@ input:active {
   }
 
   .email-tel {
-    padding-top: 24px;
-    padding-bottom: 24px;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: 12px;
+    line-height: 1.17;
     letter-spacing: 0.02em;
     color: #434455;
     text-decoration: none;
@@ -1137,7 +1174,11 @@ input:active {
     color: #404bbf;
   }
 
-  .burger-div {
+  .nav-li-link-modal.current {
+    color: #404bbf;
+  }
+
+  .burger-btn {
     display: none;
   }
 
@@ -1150,7 +1191,7 @@ input:active {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/people-office@2x.jpg);
+      url(../images/hero-image-tablet.jpg);
   }
 
   .title {
@@ -1176,10 +1217,6 @@ input:active {
 
   .item-title-adv {
     text-align: start;
-  }
-
-  .paragraph {
-    font-weight: 400;
   }
 
   .team-ul {
@@ -1239,6 +1276,10 @@ input:active {
     justify-content: start;
   }
 
+  .footer-form-input {
+    width: 264px;
+  }
+
   .modal {
     max-width: 408px;
     padding: 72px 24px 24px 24px;
@@ -1250,9 +1291,20 @@ input:active {
   }
 }
 
+@media (min-width: 768px) and (min-resolution: 192dpi) {
+  .hero {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-image-tablet@2x.jpg);
+  }
+}
+
 /* ----------@MEDIA 1158px------------ */
 
-@media (min-width: 1158px) and (min-resolution: 192dpi) {
+@media (min-width: 1158px) {
   .container {
     min-width: 1158px;
     margin-left: auto;
@@ -1307,7 +1359,7 @@ input:active {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/people-office@2x.jpg);
+      url(../images/people-office-page.jpg);
   }
 
   .advant-icon-blok {
@@ -1320,6 +1372,13 @@ input:active {
     gap: 24px;
     height: 112px;
     margin-bottom: 8px;
+  }
+
+  .item-title-adv {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: start;
   }
 
   .advant-ul-li {
@@ -1348,11 +1407,36 @@ input:active {
     padding-bottom: 100px;
   }
 
+  .footer-div {
+    gap: unset;
+    flex-wrap: nowrap;
+  }
+
   .footer-box {
-    margin-right: auto;
+    margin-right: 120px;
   }
 
   .footer-media {
-    margin-right: auto;
+    margin-right: 80px;
+  }
+
+  .footer-form {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .footer-form-input {
+    width: 264px;
+  }
+}
+
+@media (min-width: 1158px) and (min-resolution: 192dpi) {
+  .hero {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office-page@2x.jpg);
   }
 }
