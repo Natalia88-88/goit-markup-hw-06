@@ -1069,7 +1069,7 @@ input:active {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/people-office-page.jpg);
+      url(../images/Dark-bg-mob.jpg);
   }
 }
 
@@ -1281,7 +1281,7 @@ input:active {
   }
 
   .modal {
-    max-width: 408px;
+    width: 408px;
     padding: 72px 24px 24px 24px;
   }
 
@@ -1427,6 +1427,10 @@ input:active {
 
   .footer-form-input {
     width: 264px;
+  }
+
+  .modal {
+    width: 408px;
   }
 }
 
