@@ -1073,7 +1073,7 @@ input:active {
   }
 }
 
-@media (min-width: 320px) and (min-resolution: 192px) {
+@media (min-width: 320px) and (min-resolution: 192dpi) {
   .hero {
     background-image: linear-gradient(
         to bottom,
